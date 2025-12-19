@@ -1,5 +1,5 @@
 Dependencies:
-	Jansson 2.0 with 'long long' support
+	Jansson 2.0 with 'long' support
 
 Example dependencies:
 	Jansson 2.1 (to read JSON from stdin)
@@ -7,7 +7,7 @@ Example dependencies:
 
 For usage, check out example.c. Run "make example" to build it.
 Note that you must assign blkmk_sha256_impl to a function pointer:
-	bool mysha256(void hash_out, const void *data, size_t datasz)
+bool mysha256(void hash_out, const void *data, size_t datasz)
 hash_out must be able to overlap with data!
 Also note that you should NOT roll ntime for data retrieved without explicitly
 checking that it falls within the template's limitations (mintime, maxtime,
